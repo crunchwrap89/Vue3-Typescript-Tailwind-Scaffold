@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --white-soft: #f8f8f8;
+    --white-mute: #f2f2f2;
+  
+    --black: #181818;
+    --black-soft: #222222;
+    --black-mute: #282828;
+    --black-transparent: rgba(0, 0, 0, 0.2);
+    --black-transparent-2: rgba(32, 33, 36, 0.7);
+  
+    --grayscale-1: #212121;
+    --grayscale-2: #424242;
+    --grayscale-3: #616161;
+    --grayscale-4: #757575;
+    --grayscale-5: #eeeeee; 
+  
+    --cta-yellow: #ffb813;
+    --cta-green: #99bb99;
+    --cta-red: #cb2933;
+  
+    --red: #cb2933;
+    --red-tint: #E64848;
+    --blue: #24BAB9;
+    --blue-tint: #9ED2C6;
+    --green: #52ab8a;
+    --green-tint: #ceffe1;
+    --indigo: #3f4856;
+    --indigo-light: #4c3e50;
+  
+    --gradient-1: radial-gradient(
+        ellipse at bottom,
+      var(--indigo-light) 0%,
+      var(--indigo) 100%
+    );
+    --gradient-2: radial-gradient(
+      circle,
+      var(--blue-tint) 0%,
+      var(--green-tint) 100%
+      );
+  
+}
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  html, body {
+    margin: 0px;
+    height: 100%;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+      Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--font-size-small);
+    text-rendering: optimizeLegibility;
+    user-select: none; 
+    touch-action: none;
+  }
+  
+  #app {
+    height: 100%;
+    background: var(--gradient-1)
+  }
+  
+  /* animations */
+  .slide-fade-enter-active {
+    transition: all 0.1s ease-out;
+  }
+  
+  .slide-fade-leave-active {
+    transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+  
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+  }
